@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Cape Town Taxi Routes</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
+
+    <script src="lodash.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+    <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+    <script src="TileLayer.Grayscale.js"></script>
+
+    <script src="http://d3js.org/topojson.v1.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="trmap.css" />
+  </head>
+
+  <body>
+    <div id="spinner-layer">
+      <div id="spinner">
+        <i class="fa fa-spinner fa-pulse fa-3x fa-fw margin-bottom"></i><span class="sr-only">Loading...</span>
+      </div>
+    </div>
+
+    <div id="flex-container">
+      <div id="header">
+        <h3>Cape Town Taxi Routes <small>Click on a blue line on the map for more information</small></h3>
+
+        <p class="disclaimer">Route information obtained from the City of Cape Town; <a href="disclaimer.html" target="_blank">see disclaimer</a></small>.</p>
+      </div>
+
+      <div id="inner-container">
+        <div id="map"></div>
+
+        <div id="table-box">
+          <table id="route-table" class="table table-striped">
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="trmap.js"></script>
+  </body>
+</html>
