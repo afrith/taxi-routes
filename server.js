@@ -6,6 +6,7 @@ app.use(express.static('static'));
 
 var connectDb = pgclient({
   config: {
+    host: '/var/run/postgresql',
     database: 'taxis'
   }
 });
