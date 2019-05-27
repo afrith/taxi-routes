@@ -1,14 +1,11 @@
 var express = require('express');
 var pgclient = require('connect-pgclient');
+var parseConnString = require('pg-connection-string').parse;
 
 var app = express();
 app.use(express.static('static'));
 
-var connectDb = pgclient({
-  config: {
-    database: 'taxis'
-  }
-});
+var connectDb = pgclient({config: parseConnString(process.env.DATABASE_URL || 'postgres://localhost:5432/taxis')});
 
 app.get('/point/:z/:x/:y', connectDb, function (req, res, next) {
   var x = +req.params.x,

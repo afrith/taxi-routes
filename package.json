@@ -3,14 +3,17 @@
   "version": "0.0.1",
   "description": "Map of minibus taxi routes in Cape Town.",
   "main": "server.js",
-  "repository" :
-  {
-    "type" : "git",
-    "url" : "https://github.com/afrith/taxi-routes.git"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/afrith/taxi-routes.git"
   },
   "dependencies": {
     "connect-pgclient": "^0.3.0",
-    "express": "^4.13.4"
+    "express": "^4.17.1",
+    "pg-connection-string": "^2.0.0"
+  },
+  "resolutions": {
+    "pg": "6.4.2"
   },
   "devDependencies": {},
   "scripts": {
